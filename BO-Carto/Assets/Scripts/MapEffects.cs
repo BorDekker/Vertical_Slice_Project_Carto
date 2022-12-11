@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MapEffects : MonoBehaviour
 {
-    public float ZoomX, ZoomY;
-    public float changePerSecondX, changePerSecondY;
+    public float ZoomZ;
+    public float changePerSecondZ;
     
     // Dit wil ik gebruiken om een max zoomuit te setten
     //public float MaxZoomX, MaxZoomY;
@@ -13,24 +13,15 @@ public class MapEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = new Vector3(ZoomX, ZoomY, 1);
-        if (Input.GetKey(KeyCode.M) && ZoomX >= 0f)
+        transform.localPosition = new Vector3(0, 0 , ZoomZ);
+        if (Input.GetKey(KeyCode.M) && ZoomZ >= -50f)
         {
-            ZoomOutX();
-        }
-
-        if (Input.GetKey(KeyCode.M) && ZoomY >= 0f)
-        {
-            ZoomOutY();
+            ZoomOutZ();
         }
     }
 
-    void ZoomOutX()
+    void ZoomOutZ()
     {
-        ZoomX += changePerSecondY * Time.deltaTime;
-    }
-    void ZoomOutY()
-    {
-        ZoomY += changePerSecondY * Time.deltaTime;
+        ZoomZ += changePerSecondZ * Time.deltaTime;
     }
 }
