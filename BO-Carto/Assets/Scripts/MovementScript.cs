@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementScript : MonoBehaviour
 {
     public Vector3 velocity = new Vector3();
-    float Movementspeed = 3f;
+    float Movementspeed = 6f;
 
     void Update()
     {
