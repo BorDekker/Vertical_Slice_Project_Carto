@@ -1371,7 +1371,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea50c348c8a8a4c478221cab29176a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xPosition: 12.53753
+  yPosition: 11.26308
+  zPosition: -27.90452
+  changePerSecondY: 165
+  changePerSecondZ: -165
   image: {fileID: 1416941411}
+  Camera: {fileID: 1380751584}
   currentState: 1
 --- !u!1 &1803206154
 GameObject:
