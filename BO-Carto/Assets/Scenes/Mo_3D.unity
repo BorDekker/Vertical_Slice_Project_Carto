@@ -1280,6 +1280,7 @@ GameObject:
   - component: {fileID: 1555224522}
   - component: {fileID: 1555224521}
   - component: {fileID: 1555224525}
+  - component: {fileID: 1555224526}
   m_Layer: 5
   m_Name: UImanager
   m_TagString: Untagged
@@ -1380,14 +1381,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea50c348c8a8a4c478221cab29176a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myUIGroup: {fileID: 1555224526}
   xPosition: 12.53753
   yPosition: 11.26308
   zPosition: -27.90452
   changePerSecondY: 165
   changePerSecondZ: -165
+  ScalePerSecond: 8
+  xScale: 4
+  yScale: 4
   image: {fileID: 1416941411}
   Camera: {fileID: 1380751584}
   currentState: 1
+--- !u!225 &1555224526
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555224520}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1803206154
 GameObject:
   m_ObjectHideFlags: 0
