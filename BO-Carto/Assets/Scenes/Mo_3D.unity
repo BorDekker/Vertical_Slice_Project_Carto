@@ -493,6 +493,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
+  Player: {fileID: 180638229}
+  playerRight: {fileID: 21300000, guid: d42c497c39e4a8e44a0f0b817c34521a, type: 3}
+  playerLeft: {fileID: 21300000, guid: c6f9948ee54a2ec4fac30c8be752eeb7, type: 3}
+  playerForward: {fileID: 21300000, guid: 9f32b0333c61d3b419613ab7e8096d4d, type: 3}
+  playerBack: {fileID: 21300000, guid: 7a7dfb60db03b124fa97236a15624bfb, type: 3}
 --- !u!4 &806345628
 Transform:
   m_ObjectHideFlags: 0
@@ -828,6 +833,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
+  Player: {fileID: 180638229}
+  playerRight: {fileID: 21300000, guid: d42c497c39e4a8e44a0f0b817c34521a, type: 3}
+  playerLeft: {fileID: 21300000, guid: c6f9948ee54a2ec4fac30c8be752eeb7, type: 3}
+  playerForward: {fileID: 21300000, guid: 9f32b0333c61d3b419613ab7e8096d4d, type: 3}
+  playerBack: {fileID: 21300000, guid: 7a7dfb60db03b124fa97236a15624bfb, type: 3}
 --- !u!4 &1154430618
 Transform:
   m_ObjectHideFlags: 0
@@ -973,7 +983,6 @@ GameObject:
   - component: {fileID: 1380751587}
   - component: {fileID: 1380751586}
   - component: {fileID: 1380751585}
-  - component: {fileID: 1380751588}
   - component: {fileID: 1380751590}
   m_Layer: 0
   m_Name: Main Camera
@@ -1052,20 +1061,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12.537534, y: 11.263081}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1380751588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380751584}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c15f0366260d744780df917314cc719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ZoomZ: -10.73
-  changePerSecondZ: -50
 --- !u!222 &1380751590
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1342,7 +1337,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1380751586}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1351,7 +1346,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &1555224524
 RectTransform:
