@@ -1064,8 +1064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c15f0366260d744780df917314cc719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZoomZ: -10.73
-  changePerSecondZ: -50
 --- !u!222 &1380751590
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1085,6 +1083,7 @@ GameObject:
   - component: {fileID: 1416941412}
   - component: {fileID: 1416941414}
   - component: {fileID: 1416941413}
+  - component: {fileID: 1416941415}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1101,15 +1100,15 @@ RectTransform:
   m_GameObject: {fileID: 1416941411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.94, y: 3.67, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1555224524}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 574, y: 142}
+  m_SizeDelta: {x: 0, y: -0.92962646}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416941413
 MonoBehaviour:
@@ -1149,6 +1148,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416941411}
   m_CullTransparentMesh: 1
+--- !u!114 &1416941415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416941411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 3
+  m_AspectRatio: 2.139
 --- !u!1 &1422685163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,13 +1298,14 @@ GameObject:
   - component: {fileID: 1555224522}
   - component: {fileID: 1555224521}
   - component: {fileID: 1555224525}
+  - component: {fileID: 1555224526}
   m_Layer: 5
   m_Name: UImanager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1555224521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,14 +1399,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea50c348c8a8a4c478221cab29176a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myUIGroup: {fileID: 1555224526}
   xPosition: 12.53753
   yPosition: 11.26308
   zPosition: -27.90452
   changePerSecondY: 165
   changePerSecondZ: -165
+  ScalePerSecond: 8
+  xScale: 4
+  yScale: 4
   image: {fileID: 1416941411}
   Camera: {fileID: 1380751584}
   currentState: 1
+--- !u!225 &1555224526
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555224520}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1803206154
 GameObject:
   m_ObjectHideFlags: 0
