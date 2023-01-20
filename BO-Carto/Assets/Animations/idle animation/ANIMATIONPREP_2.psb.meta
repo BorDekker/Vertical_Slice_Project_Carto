@@ -309,9 +309,9 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: bone_10
-      position: {x: 47.89708, y: 0.000012815811, z: 0}
+      position: {x: 47.897053, y: 0.000004168747, z: 0}
       rotation: {x: 0, y: 0, z: 0.16509011, w: 0.98627853}
-      length: 47.02458
+      length: 47.024582
       parentId: 1
     - name: bone_9
       position: {x: 88.60738, y: 0.000023810246, z: 0}
