@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: kaart
+    uniqueID: 1039968313
+    locked: 0
