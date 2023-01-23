@@ -18,6 +18,9 @@ public class Map_State : MonoBehaviour
 
     public GameObject image;
     public GameObject Camera;
+
+    public GameObject Player;
+    public Image playerIcon;
     public enum State
     {
         OPEN,
@@ -28,7 +31,7 @@ public class Map_State : MonoBehaviour
 
     private void Start()
     {
-        
+        playerIcon.rectTransform.localPosition = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
@@ -60,6 +63,19 @@ public class Map_State : MonoBehaviour
                     yPosition += changePerSecondY * Time.deltaTime;
                     zPosition += changePerSecondZ * Time.deltaTime;
                 }
+                // Get the player's current latitude and longitude
+                float PlayerX = Player.transform.position.x;
+                float PlayerZ = Player.transform.position.z;
+
+                // Update the position of the player icon on the map
+                playerIcon.transform.position = new Vector3(PlayerX += 950, PlayerZ += 550, 0);
+
+                // Scale and position the player's icon
+                playerIcon.rectTransform.localScale = new Vector3(2f, 1f, 2f);
+
+                // Enable the player icon
+                playerIcon.enabled = true;
+
                 if (Input.GetKeyDown(KeyCode.M))
                 {
                     currentState = State.CLOSED;
@@ -67,6 +83,7 @@ public class Map_State : MonoBehaviour
                 break;
 
             case State.CLOSED:
+                playerIcon.enabled = false;
                 //Fading out UI
                 xScale = 4;
                 yScale = 4;
