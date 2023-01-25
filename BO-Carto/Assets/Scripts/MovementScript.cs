@@ -21,6 +21,7 @@ public class MovementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += transform.right * Movementspeed * Time.deltaTime;
+            animator.SetFloat("Speed", value: Movementspeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerRight;
         }
 
