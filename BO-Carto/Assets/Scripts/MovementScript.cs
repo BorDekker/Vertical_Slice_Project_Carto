@@ -18,31 +18,34 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
+        animator.SetFloat("Speed", 0f);
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += transform.right * Movementspeed * Time.deltaTime;
-            animator.SetFloat("Speed", value: Movementspeed);
+            animator.SetFloat("Speed", Movementspeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerRight;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += -transform.right * Movementspeed * Time.deltaTime;
+            animator.SetFloat("Speed", Movementspeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerLeft;
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * Movementspeed * Time.deltaTime;
+            animator.SetFloat("Speed", Movementspeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerForward;
         } 
 
         if (Input.GetKey(KeyCode.S))
         {
             transform.position += -transform.forward * Movementspeed * Time.deltaTime;
+            animator.SetFloat("Speed", Movementspeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerBack;
         }
 
-        animator.SetFloat("Speed", Mathf.Abs(Movementspeed));
     }
 }
