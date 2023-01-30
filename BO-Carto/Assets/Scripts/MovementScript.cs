@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementScript : MonoBehaviour
 {
     public Vector3 velocity = new Vector3();
-    float Movementspeed = 6f;
+    float movementSpeed = 6f;
 
     public GameObject Player;
 
@@ -19,31 +19,32 @@ public class MovementScript : MonoBehaviour
     void Update()
     {
         animator.SetFloat("Speed", 0f);
+
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += transform.right * Movementspeed * Time.deltaTime;
-            animator.SetFloat("Speed", Movementspeed);
+            transform.position += transform.right * movementSpeed * Time.deltaTime;
+            animator.SetFloat("Speed", movementSpeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerRight;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += -transform.right * Movementspeed * Time.deltaTime;
-            animator.SetFloat("Speed", Movementspeed);
+            transform.position += -transform.right * movementSpeed * Time.deltaTime;
+            animator.SetFloat("Speed", movementSpeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerLeft;
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += transform.forward * Movementspeed * Time.deltaTime;
-            animator.SetFloat("Speed", Movementspeed);
+            transform.position += transform.forward * movementSpeed * Time.deltaTime;
+            animator.SetFloat("Speed", movementSpeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerForward;
         } 
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += -transform.forward * Movementspeed * Time.deltaTime;
-            animator.SetFloat("Speed", Movementspeed);
+            transform.position += -transform.forward * movementSpeed * Time.deltaTime;
+            animator.SetFloat("Speed", movementSpeed);
             //Player.GetComponent<SpriteRenderer>().sprite = playerBack;
         }
 
