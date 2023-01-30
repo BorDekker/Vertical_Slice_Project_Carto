@@ -8,7 +8,7 @@ public class MovementScript : MonoBehaviour
     float Movementspeed = 6f;
 
     public GameObject Player;
-
+    private bool isFacingRight = true;
     public Animator animator;
 
     //public Sprite playerRight;
@@ -47,5 +47,17 @@ public class MovementScript : MonoBehaviour
             //Player.GetComponent<SpriteRenderer>().sprite = playerBack;
         }
 
+        Flip();
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && Input.GetKey(KeyCode.A) || !isFacingRight && Input.GetKey(KeyCode.D))
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 }
